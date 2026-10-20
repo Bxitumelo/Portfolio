@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boitumelo Netsianda — Graphic Designer & Illustrator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#e43d3d;--black:#000;--white:#fff;--paper:#f3f1ee;--ink:#14090b;--card:#fff;--muted:#6b6264;--line:#ddd8d4;
+--disp:'Anton','Impact','Arial Narrow',sans-serif;--body:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121012;--ink:#f5f1ee;--card:#1c191b;--muted:#a79ea1;--line:#332e30}}
+:root[data-theme="dark"]{--paper:#121012;--ink:#f5f1ee;--card:#1c191b;--muted:#a79ea1;--line:#332e30}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));height:auto}
+body{margin:0;background:#000;color:var(--white);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);font-weight:400;text-transform:uppercase;line-height:.95;margin:0;letter-spacing:.01em}
+.topo{position:absolute;pointer-events:none;opacity:.55}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);border-bottom:1px solid #222}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .logo{font-family:var(--disp);font-size:22px;text-decoration:none;letter-spacing:.04em}
+nav .logo span{color:var(--red)}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;font-size:15px;letter-spacing:.18em;text-transform:uppercase;opacity:.8}
+nav ul a:hover{opacity:1;color:var(--red)}
+@media(max-width:700px){nav ul{gap:14px}nav ul a{font-size:12px;letter-spacing:.1em}nav ul li:nth-child(2){display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:110px 0 70px}
+.hero .frame{border:2px solid #fff;padding:clamp(28px,5vw,70px) clamp(44px,9vw,140px);position:relative;text-align:center}
+.dots{display:flex;flex-direction:column;gap:22px;position:absolute;left:clamp(14px,3vw,40px);top:50%;transform:translateY(-50%)}
+.dots i{width:clamp(14px,2vw,22px);aspect-ratio:1;border-radius:50%}
+.hero h1{font-size:clamp(64px,15vw,200px);margin:0;text-align:center;white-space:nowrap}
+.hero h1 .ibar{display:inline-block;vertical-align:baseline;overflow:hidden;width:.15em;height:.73em;height:1cap;background:#fff;color:#000;margin:0 .045em}
+.hero h1 .v{font-family:var(--body);display:flex;flex-direction:column;justify-content:space-between;align-items:center;height:100%;padding:.03em 0;font-size:.1em;font-weight:700;line-height:1}
+.hero h1 .v i{font-style:normal;display:block}
+.hero .sub{letter-spacing:.7em;text-indent:.7em;text-align:center;margin:18px 0 0;font-size:clamp(14px,1.8vw,24px);text-transform:uppercase}
+.hero .name{display:flex;align-items:center;gap:20px;margin-top:26px;letter-spacing:.5em;font-size:clamp(13px,1.8vw,24px);text-transform:uppercase;justify-content:space-between}
+.hero .name hr{flex:1;border:0;border-top:2px solid #fff;margin:0}
+.cta{display:block;width:fit-content;margin:34px auto 0;background:var(--red);color:#fff;text-decoration:none;padding:14px 28px;border-radius:40px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:15px;transition:transform .2s}
+.cta:hover{transform:translateY(-2px)}
+/* about */
+section{position:relative}
+.about{background:#000;padding:110px 0;overflow:hidden}
+.about .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.about h2{font-size:clamp(56px,9vw,120px)}
+.about .role{color:var(--red);letter-spacing:.2em;text-transform:uppercase;font-size:17px;margin:16px 0 28px;font-weight:700}
+.about p{font-size:clamp(19px,2.3vw,25px);max-width:560px;margin:0 0 18px;color:#e9e4e1}
+.about .photo{position:relative}
+.about .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-bottom:6px solid var(--red)}
+.about .ig{position:absolute;left:0;right:0;bottom:0;padding:50px 20px 18px;background:linear-gradient(transparent,rgba(0,0,0,.8));text-align:center;font-family:var(--disp);font-size:26px;letter-spacing:.06em;text-decoration:none}
+.skills{background:#000;border-top:1px solid #222;padding:0 0 100px}
+.skills .row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid #333}
+.skills .row div{justify-content:center;text-align:center;padding:34px 28px;border-right:1px solid #333;font-family:var(--disp);font-size:clamp(28px,4vw,52px);text-transform:uppercase;display:flex;gap:16px;align-items:center;transition:background .25s}
+.skills .row div:last-child{border:0}
+.skills .row div{justify-content:center}
+.skills .row div:hover{background:var(--red)}
+.skills .row span{color:var(--red);font-size:.7em;transition:color .25s}.skills .row div:hover span{color:#fff}
+.skills h3{text-align:center;font-size:clamp(34px,5vw,60px);padding:50px 0 34px}
+@media(max-width:800px){.about .grid{grid-template-columns:1fr;gap:40px}.skills .row{grid-template-columns:1fr}.skills .row div{border-right:0;border-bottom:1px solid #333}}
+/* light sections */
+.light{background:var(--paper);color:var(--ink)}
+.process{padding:100px 0}
+.sec-h{display:flex;align-items:baseline;gap:18px;margin-bottom:46px;flex-wrap:wrap}
+.sec-h h2{font-size:clamp(46px,7vw,92px)}
+.sec-h p{margin:0;color:var(--muted);max-width:520px;font-size:19px}
+.sec-h.col{flex-direction:column;align-items:center;text-align:center;gap:14px}.sec-h.col p{max-width:520px}
+.sec-h.c{flex-direction:column;align-items:center;text-align:center;gap:16px}.sec-h.c p{max-width:520px}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--red);padding:22px 18px;border-radius:4px}
+.step em{font-style:normal;font-family:var(--disp);font-size:44px;color:var(--red);line-height:1}
+.step h3{font-size:30px;margin:8px 0 12px}
+.step ul{margin:0;padding-left:18px;font-size:17px;color:var(--muted)}
+.step li{margin-bottom:6px}
+@media(max-width:980px){.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.work{padding:20px 0 110px}
+.cards>div{display:flex}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px}
+.card{all:unset;box-sizing:border-box;flex:1;width:100%;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;color:var(--ink)}
+.card:hover,.card:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.card:focus-visible{outline:3px solid var(--red)}
+.card .th{aspect-ratio:4/3;overflow:hidden;background:#000}
+.card .th img{width:100%;height:100%;object-fit:cover;scale:1.2;transition:transform .5s;will-change:translate}
+.card:hover .th img{transform:scale(1.06)}
+.card .tx{padding:18px 20px 22px}
+.card .tag{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:700}
+.card h3{font-size:34px;margin:6px 0 8px}
+.card p{margin:0;font-size:17px;color:var(--muted)}
+.card .more{display:inline-block;margin-top:14px;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-bottom:2px solid var(--red)}
+/* contact */
+.contact{background:#000;padding:110px 0;overflow:hidden}
+.contact .grid{display:block;max-width:820px;margin:0 auto;text-align:center}
+.contact img{width:100%;max-width:380px;border-radius:4px}
+.contact h2{font-size:clamp(48px,12vw,150px);white-space:nowrap}
+.contact .lc{font-size:19px;color:var(--red);letter-spacing:.2em;font-weight:700;text-transform:uppercase;margin:20px 0 26px}
+.contact a.l{display:block;font-size:clamp(17px,2.4vw,26px);text-decoration:none;padding:12px 0;border-bottom:1px solid #333}
+.contact a.l:hover{color:var(--red)}
+.contact a.l small{display:inline-block;width:auto;margin-right:16px;color:#8a8083;font-size:14px;letter-spacing:.16em;text-transform:uppercase}
+@media(max-width:560px){.contact a.l small{display:block;margin:0 0 2px}}
+footer{background:#000;border-top:1px solid #222;text-align:center;padding:24px;font-size:14px;color:#8a8083;letter-spacing:.12em;text-transform:uppercase}
+/* modal */
+.modal{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.78);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:calc(30px + env(safe-area-inset-top,0px)) 16px calc(30px + env(safe-area-inset-bottom,0px))}
+.modal.open{display:flex}
+.panel{background:var(--paper);color:var(--ink);width:100%;max-width:1040px;border-radius:8px;position:relative;animation:up .3s ease}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.close{position:absolute;top:14px;right:14px;z-index:2;width:42px;height:42px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:22px;cursor:pointer}
+.panel header{padding:42px 40px 8px}
+.panel header .tag{color:var(--red);font-size:14px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+.panel header h2{font-size:clamp(40px,6vw,76px);margin-top:8px;padding-right:40px}
+.panel .body{padding:12px 40px 40px;display:grid;grid-template-columns:1fr 1fr;gap:12px 44px}
+.panel .body p{margin:0 0 16px;color:var(--muted);font-size:19px}
+.panel .body ul{margin:0 0 14px;padding-left:20px;color:var(--muted);font-size:19px}
+.notes{display:grid;gap:12px;align-content:start}
+.note{border-left:4px solid var(--red);background:var(--card);padding:14px 18px;border-radius:0 4px 4px 0;font-size:18px;color:var(--muted)}
+.note b{display:block;color:var(--ink);font-size:14px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:4px}
+.gal{padding:0 40px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.gal figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.gal figure.wide{grid-column:1/-1}
+.gal img{width:100%;height:auto;cursor:zoom-in}
+.gal figcaption{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:9px 14px}
+@media(max-width:760px){.panel header,.panel .body,.gal{padding-left:20px;padding-right:20px}.panel .body{grid-template-columns:1fr}}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+.lb.open{display:flex}.lb img{max-height:100%;max-width:100%;object-fit:contain}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;background:var(--red);transform-origin:0 50%;transform:scaleX(0);z-index:40}
+.js [data-r]{opacity:0;transform:translateY(38px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js [data-r].in{opacity:1;transform:none}
+.hero .frame,.hero h1,.hero .sub,.hero .name,.dots{will-change:translate}
+.about .photo{overflow:hidden;border-bottom:6px solid var(--red)}
+.about .photo img{border-bottom:0;scale:1.15;will-change:translate}
+.contact .cimg{overflow:hidden;max-width:380px;border-radius:4px}.contact .cimg img{max-width:none;width:100%;scale:1.12;border-radius:0;will-change:translate}
+.badge{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:20px}
+.card .th{position:relative}
+.gal.eq{grid-template-columns:minmax(0,var(--ew,100%));justify-content:center}.gal.eq img{aspect-ratio:var(--er,3/2);object-fit:cover}
+.gal figure.story img{aspect-ratio:9/16;object-fit:cover}
+.gal figcaption small{display:block;text-transform:none;letter-spacing:0;font-size:16px;margin-top:6px;line-height:1.55}
+.skills .row{grid-template-columns:repeat(4,1fr)}.skills .row div{font-size:clamp(24px,2.9vw,40px);padding:30px 22px}
+@media(max-width:1000px){.skills .row{grid-template-columns:repeat(2,1fr)}.skills .row div{border-bottom:1px solid #333}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<nav><div class="wrap"><a class="logo" href="#top">BN<span>.</span></a>
+<ul><li><a href="#about">About</a></li><li><a href="#process">Process</a></li><li><a href="#work">Work</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero" id="top"><div class="wrap" style="width:100%">
+<div class="frame">
+<div class="dots" data-hp=".14"><i style="background:#e43d3d"></i><i style="background:#ffdd57"></i><i style="background:#00c060"></i></div>
+<h1 data-hp=".2" aria-label="Graphic Design">GRAPH<span class="ibar" aria-hidden="true"><span class="v"><i>D</i><i>E</i><i>S</i><i>I</i><i>G</i><i>N</i></span></span>C</h1>
+<div class="sub" data-hp=".1">Portfolio</div>
+<div class="name" data-hp=".05"><span>Boitumelo</span><hr><span>Netsianda</span></div>
+</div>
+<a class="cta" href="#work">View my work ↓</a>
+</div></header>
+
+<section class="about" id="about"><div class="wrap grid">
+<div><h2>About me</h2><div class="role">Graphic Designer &amp; Illustrator</div>
+<p>Hi, my name is Boitumelo Netsianda, based in Pretoria, South Africa. I am a digital content creator who specializes in graphic design, branding and illustration art.</p>
+<p>Photography and travelling are my favourite hobbies.</p></div>
+<div class="photo"><img data-k="portrait" data-par=".07" alt="Portrait of Boitumelo Netsianda"></div>
+</div></section>
+
+<section class="skills"><div class="wrap"><h3>Core skills</h3></div>
+<div class="wrap"><div class="row"><div><span>→</span>Graphic Design</div><div><span>→</span>Social Media Posts</div><div><span>→</span>Branding</div><div><span>→</span>Illustration Art</div></div></div></section>
+
+<section class="light process" id="process"><div class="wrap">
+<div class="sec-h col"><h2>My 5 step process</h2><p>From the first brief to the final mock-up, every project follows the same five steps.</p></div>
+<div class="steps">
+<div class="step"><em>1</em><h3>Brief</h3><ul><li>Creative brief and contextual breakdown</li><li>Will it be print or digital?</li></ul></div>
+<div class="step"><em>2</em><h3>Research</h3><ul><li>Compile moodboard</li><li>Highlight key words</li><li>Establish visual direction</li></ul></div>
+<div class="step"><em>3</em><h3>Concept design</h3><ul><li>Layout design</li><li>Rough sketches</li><li>Typography experimentation</li></ul></div>
+<div class="step"><em>4</em><h3>Refinement</h3><ul><li>Digitize strong concepts</li><li>Apply suitable colours and fonts</li><li>Revise mistakes</li></ul></div>
+<div class="step"><em>5</em><h3>Final delivery</h3><ul><li>Deliver final design</li><li>Create mock-ups for presentation (if needed)</li></ul></div>
+</div></div></section>
+
+<section class="light work" id="work"><div class="wrap">
+<div class="sec-h c"><h2>Selected work</h2><p>Tap a project to see the full story, process and extra images.</p></div>
+<div class="cards" id="cards"></div></div></section>
+
+<section class="contact" id="contact"><div class="wrap grid">
+<div><h2>Thank you!</h2><div class="lc">→ Let’s collaborate</div>
+<a class="l" href="tel:+27671353504"><small>Cell</small>067-135-3504</a>
+<a class="l" href="mailto:bbnetsianda@gmail.com"><small>Email</small>bbnetsianda@gmail.com</a>
+<a class="l" href="https://instagram.com/BoitumeloTheArtist" target="_blank" rel="noopener"><small>Instagram</small>@BoitumeloTheArtist</a></div>
+</div></section>
+<footer>© <span id="yr"></span> Boitumelo Netsianda · Pretoria, South Africa</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="panel" id="panel"></div></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const IMG={"portrait":"images/portrait.webp","clc1":"images/clc1.webp","clc2":"images/clc2.webp","clc3":"images/clc3.webp","foyer":"images/foyer.webp","soundcloud":"images/soundcloud.webp","speaker":"images/speaker.webp","mens":"images/mens.webp","pas1":"images/pas1.webp","pas2":"images/pas2.webp","newm":"images/newm.webp","cafe1":"images/cafe1.webp","cafe2":"images/cafe2.webp","b1":"images/b1.webp","b2":"images/b2.webp","b3":"images/b3.webp","bfull":"images/bfull.webp","bprint1":"images/bprint1.webp","bprint2":"images/bprint2.webp","mc1":"images/mc1.webp","mc2":"images/mc2.webp","ge1":"images/ge1.webp","ge2":"images/ge2.webp","ge3":"images/ge3.webp","ge4":"images/ge4.webp","ge5":"images/ge5.webp","ge6":"images/ge6.webp","ge7":"images/ge7.webp","ge8":"images/ge8.webp","ei1":"images/ei1.webp","ei5":"images/ei5.webp","ei6":"images/ei6.webp","ei7":"images/ei7.webp","ei2":"images/ei2.webp","ei3":"images/ei3.webp","ka1":"images/ka1.webp","ka2":"images/ka2.webp","ka3":"images/ka3.webp","boy":"images/boy.webp","grl":"images/grl.webp","rec":"images/rec.webp","mp1":"images/mp1.webp","mp2":"images/mp2.webp","mp3":"images/mp3.webp","mp4":"images/mp4.webp","mp5":"images/mp5.webp","bx1":"images/bx1.webp","bx2":"images/bx2.webp","bx3":"images/bx3.webp","bxp":"images/bxp.webp"};
+const DIM={"portrait":[1449,1811],"clc1":[648,810],"clc2":[648,810],"clc3":[648,810],"foyer":[756,1344],"soundcloud":[560,560],"speaker":[1152,648],"mens":[1344,756],"pas1":[756,1344],"pas2":[756,1344],"newm":[1152,648],"cafe1":[744,1053],"cafe2":[744,1053],"b1":[992,1404],"b2":[744,1053],"b3":[744,1053],"bfull":[1212,884],"bprint1":[646,1148],"bprint2":[646,1148],"mc1":[972,1215],"mc2":[1434,1434],"ge1":[2105,1489],"ge2":[650,1004],"ge3":[1350,900],"ge4":[1451,1088],"ge5":[1522,1015],"ge6":[1800,1200],"ge7":[1120,1452],"ge8":[1800,1200],"ei1":[992,1404],"ei5":[1985,1404],"ei6":[2105,1488],"ei7":[2105,1488],"ei2":[1489,1053],"ei3":[1404,1985],"ka1":[794,1123],"ka2":[994,1226],"ka3":[1053,1489],"boy":[1241,1754],"grl":[1556,2200],"rec":[1080,1350],"mp1":[2300,1533],"mp2":[2300,1533],"mp3":[2300,1533],"mp4":[1533,2300],"mp5":[2106,2300],"bx1":[596,842],"bx2":[596,842],"bx3":[596,842],"bxp":[1920,1080]};
+const BG={"clc1": "linear-gradient(#162974,#37262f)", "clc2": "linear-gradient(#7b5a3e,#4e422b)", "clc3": "linear-gradient(#acd4ef,#aed3ec)", "foyer": "linear-gradient(#3a2522,#040610)", "soundcloud": "linear-gradient(#6d654e,#463a27)", "speaker": "linear-gradient(#191d88,#4d5465)", "mens": "linear-gradient(#9095a0,#37353d)", "wod": "linear-gradient(#655d57,#504942)", "pas1": "linear-gradient(#020203,#0d0d0d)", "pas2": "linear-gradient(#101010,#191919)", "newm": "linear-gradient(#0f303d,#0f2e3b)", "cafe1": "linear-gradient(#fdfdfd,#f9f8f8)", "cafe2": "linear-gradient(#b3c3cb,#99b2be)", "mc1": "linear-gradient(#000000,#020202)", "mc2": "linear-gradient(#41616d,#294049)", "ka1": "linear-gradient(#efefef,#fcfcfc)", "ka2": "linear-gradient(#f1f0ef,#f2f2f2)", "ka3": "linear-gradient(#254a1a,#cfbbba)", "mp1": "linear-gradient(#3c3f42,#464b25)", "mp2": "linear-gradient(#3f4448,#3f4c52)", "mp3": "linear-gradient(#5d6265,#5f5650)", "mp4": "linear-gradient(#6798b2,#5b5348)", "mp5": "linear-gradient(#1c191c,#372514)"};
+const P=[
+{id:'clc',tag:'Social media · Photoshop',title:'CLC Social Media Posts',cover:'clc2',
+ intro:['Static sermon key-point posts for @chooselifechurchsa, designed in Adobe Photoshop.','Each post was designed for Facebook, X and Instagram so followers could reflect on Sunday’s sermon key points. Bold fonts, bright colours, icons and a unique aesthetic for every design kept each post different from the last.'],
+ notes:[['Difficulties','Masking text and keeping it legible in the “South Africa” post.'],['Successes','Glowing shapes elevate the creative aesthetic, with icons that don’t distract the viewer from the text.']],
+ gal:[['clc1','Sermon key point post'],['clc2','Sermon key point post'],['clc3','Sermon key point post'],['foyer','Foyer screen ad','story'],['soundcloud','SoundCloud cover design'],['speaker','Social media ad · Guest speaker','wide'],['mens','Social media ad · Men’s Connect highlights','wide'],['rec','Social media post · Integrity'],['pas1','Social media cover reel · Desiring God · Senior Pastor John Roebert','story'],['pas2','Social media cover reel · Get Set, Go · Pastor Andre Venter','story'],['newm','New Members invitation social media post','wide'],['cafe1','Life Café · updated advertisement stand'],['cafe2','Life Café · updated advertisement stand']]},
+{id:'ge',tag:'Brand design · Affinity & Photoshop',title:'Great Eye',cover:'ge1',
+ intro:['A luxury brand transformation for a tailoring business based in Pretoria Central, Gauteng. The objective was to reposition the brand as a South African luxury fashion house, blending traditional African aesthetics with an exclusive, contemporary approach to tailoring.','The new logo combines a diamond and an eye, symbolising “Great Eye” while representing exclusivity, refinement and elevated craftsmanship. A black and gold palette reinforces the luxury positioning, and a mix of bold and slim typography presents the brand name and slogan.'],
+ notes:[['Successes','The success of redesigning the Great Eye logo lies in elevating its sophistication while ensuring consistency across the colour palette, typography, and visual language. This cohesive approach allowed me to develop mockups that reflect the brand’s new standard and the direction it can confidently pursue.'],['Difficulties','The main challenge was developing a distinctive identity without drawing too heavily from established luxury brands such as Louis Vuitton, Dior, or Burberry. Instead, I needed to identify a unique point of reference that would give Great Eye’s logo a deeper story and sense of meaning, much like the narratives behind these established brands. However, with the limited information available, certain gaps in the brand’s story remained, making it difficult to fully establish the depth and meaning needed to strengthen its identity.']],
+ eq:true,gal:[['ge1','New logo','wide'],['ge2','GE monogram','wide','','linear-gradient(#000000,#474748)'],['ge3','Clothing label tag','wide','A label tag for exclusive pieces produced from the brand’s campaigns. The initials “GE” are treated in an artistic, interconnected way, with a smaller logo above introducing the brand to new consumers.'],['ge4','Outdoor advertisement','wide','A campaign mockup showing how Great Eye can introduce its new visual language, colour palette and refined aesthetic to a wider audience, positioning it as a premium African luxury fashion brand with five-star quality and presentation.'],['ge5','Business cards','wide','Minimalist business cards that keep connections with current and potential clients. Featuring Lekie Mkwanazi’s contact details, the design draws on a black card to create intrigue, exclusivity and sophistication.'],['ge6','Shopping bags','wide'],['ge7','Paper bag design','wide','A brown gradient design for customer paper bags. The intentional use of brown and black tones creates an artistic, understated look that blends into the bag while staying simple and refined.','linear-gradient(#8c6d3e,#8c6d3e)'],['ge8','Store signage','wide','Overhead store signage that guides consumers into the store while displaying the logo. A subtle gold texture sits behind it in a colour-splash effect, and integrated lighting keeps it visible after dark.']]},
+{id:'book',tag:'Book cover · Print · Photoshop',title:'Shadows of the Throne',cover:'b1',
+ intro:['My first book design project for a client, completed during my Work Integrated Learning (WIL) programme in 2025 at BK Publishing (Pty) Ltd.','The goal was to design a royal murder-mystery book for author Zaydaan Ebrahim. It was published and sold in Durban, making it my first-ever book design.'],
+ list:['Key words: fiction, royalty, dark colour scheme','Theme: murder mystery, dark','Process: three dark-themed drafts shared with the author, then refined with a slimmer font, the crown jewels, a dark hallway and refined lighting'],
+ notes:[['Successes','Photo manipulation and colour adjustments fit the front cover to the book’s theme.'],['Difficulties','Typography experiments to find a legible font, supplied by the author, that complements the image choices.']],
+ gal:[['bfull','Final full jacket approved by the author','wide'],['b1','Concept 1 (chosen)'],['b2','Concept 2'],['b3','Concept 3'],['bprint1','Physical print · front'],['bprint2','Physical print · back']]},
+{id:'milk',tag:'Branding · Merchandise',title:'Milk & Cookies Merch',cover:'mc2',
+ intro:['A conceptual merchandise T-shirt inspired by my experience at Milk and Cookies Festival 2026 in Johannesburg.','Each photo was taken, edited and compiled by me, highlighting headliners, South African artists and influencers of the event in a collage for the T-shirt design.'],
+ notes:[['Successes','All artists and influencers were placed strategically, faces are clear and recognizable, and red lighting tones on A-Reece’s face are not harsh.'],['Difficulties','Adding the duo Majid Jordan, inserting a glass of milk and cookie icon on each sleeve, and designing timeslots for the back of the shirt.']],
+ eq:{w:'820px',r:'auto'}, gal:[['mc1','Collage design'],['mc2','Final design · mockup'],['mp1','Example photo from the event'],['mp2','Example photo from the event'],['mp3','Example photo from the event'],['mp4','Example photo from the event'],['mp5','Example photo from the event']]},
+{id:'eirene',tag:'Illustration · Personal',title:'Eirene Art Collection',cover:'ei1',
+ intro:['Inspired by personal experiences and triumphant stories of facing unspoken challenges, I decided to tell my side of the story and illustrate my worldview.','The title comes from the Greek word for peace, signifying wholeness, quietness and prosperity. It gave me a strong foundation for using motion graphics and still illustrations to tell the story.'],
+ list:['Pressure','Identity of self','Heartbreak','Doubt','Faith (the victory)'],
+ notes:[['About the series','Each illustration features a consistent colour scheme, aesthetic markings, and numbers and letters that carry deeper meaning. These are some of the strongest illustrations I have designed.']],
+ gal:[['ei1','Collection cover','wide'],['ei5','Eirene series','wide'],['ei6','Eirene series','wide'],['ei7','Eirene series','wide'],['ei2','Doubts / Noise','wide'],['ei3','Heartbreak','wide']]},
+{id:'karabo',tag:'Illustration · Adobe Illustrator',title:'Karabo Poppy Tribute',cover:'ka3',
+ intro:['A self-initiated illustration of inspirational South African art illustrator Karabo Poppy, made in Adobe Illustrator and kept as simple as possible.','It is a homage to one of the many local artists who inspire me to achieve my aspirations as a creative.'],
+ notes:[['Difficulties','Colouring skin tones and enhancing the hand tattoo details.'],['Successes','Detailing the facial features.']],
+ eq:{w:'720px',r:'auto'}, gal:[['ka1','1 · Line art'],['ka2','2 · Colouring'],['ka3','3 · Final']]},
+{id:'blx',tag:'Illustration · Tribute',title:'Blxckie Tribute',cover:'bx3',
+ intro:['A tribute illustration of Blxckie, shown step by step from line art to colour palette to the final piece, with a matching poster design.'],
+ eq:{w:'720px',r:'auto'},
+ gal:[['bx1','1 · Line art'],['bx2','2 · Colouring'],['bx3','3 · Final'],['bxp','Poster design']]},
+{id:'boy',tag:'Coming soon',title:'Boy Chld',cover:'boy',soon:true,
+ intro:['A new project is on the way. Coming soon.'],
+ gal:[['boy','Boy Chld · coming soon']]},
+{id:'grl',tag:'Coming soon',title:'GRL CHLD',cover:'grl',soon:true,
+ intro:['A new project is on the way. Coming soon.'],
+ gal:[['grl','GRL CHLD · coming soon']]}
+];
+document.querySelectorAll('img[data-k]').forEach(i=>{i.loading='lazy';i.decoding='async';i.src=IMG[i.dataset.k]});
+document.getElementById('yr').textContent=new Date().getFullYear();
+const $=s=>document.querySelector(s),cards=$('#cards'),modal=$('#modal'),panel=$('#panel'),lb=$('#lb');
+const esc=t=>t.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+P.forEach(p=>{const b=document.createElement('button');b.className='card';b.type='button';
+ b.innerHTML=`<div class="th"><img src="${IMG[p.cover]}" loading="lazy" width="${DIM[p.cover][0]}" height="${DIM[p.cover][1]}" data-par=".06" decoding="async" alt="${esc(p.title)}">${p.soon?'<span class="badge">Coming soon</span>':''}</div><div class="tx"><div class="tag">${esc(p.tag)}</div><h3>${esc(p.title)}</h3><p>${esc(p.intro[0])}</p><span class="more">${p.soon?'Sneak peek →':'View project →'}</span></div>`;
+ b.onclick=()=>open(p,b);const w=document.createElement('div');w.appendChild(b);cards.appendChild(w)});
+let last;
+function open(p,from){last=from;
+ const left=p.intro.map(t=>`<p>${esc(t)}</p>`).join('')+(p.list?`<ul>${p.list.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:'');
+ const right=(p.notes||[]).map(n=>`<div class="note"><b>${esc(n[0])}</b>${esc(n[1])}</div>`).join('');
+ panel.innerHTML=`<button class="close" aria-label="Close">×</button><header><div class="tag">${esc(p.tag)}</div><h2 id="mt">${esc(p.title)}</h2></header>
+ <div class="body"><div>${left}</div><div class="notes">${right}</div></div>
+ <div class="gal${p.eq?' eq':''}"${p.eq&&p.eq!==true?` style="--ew:${p.eq.w};--er:${p.eq.r}"`:''}>${p.gal.map(g=>`<figure class="${g[2]||''}"><img src="${IMG[g[0]]}" loading="lazy" width="${DIM[g[0]][0]}" height="${DIM[g[0]][1]}" decoding="async"${g[4]?` style="object-fit:contain;background:${g[4]}"`:(p.eq&&p.eq.contain?` style="object-fit:contain;background:${BG[g[0]]}"`:'')} alt="${esc(g[1])}"><figcaption>${esc(g[1])}${g[3]?`<small>${esc(g[3])}</small>`:''}</figcaption></figure>`).join('')}</div>`;
+ modal.classList.add('open');modal.scrollTop=0;document.body.style.overflow='hidden';panel.querySelector('.close').focus();
+ panel.querySelector('.close').onclick=close;
+ panel.querySelectorAll('.gal img').forEach(i=>i.onclick=()=>{lb.querySelector('img').src=i.src;lb.classList.add('open')});}
+function close(){modal.classList.remove('open');document.body.style.overflow='';last&&last.focus()}
+modal.addEventListener('click',e=>{if(e.target===modal)close()});
+lb.onclick=()=>lb.classList.remove('open');
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.contains('open')?lb.classList.remove('open'):modal.classList.contains('open')&&close()}});
+
+/* scroll motion */
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const bar=$('#bar'),par=[...document.querySelectorAll('[data-par]')],hp=[...document.querySelectorAll('[data-hp]')],frame=$('.hero .frame');
+if(!reduce){
+ document.querySelectorAll('.about .grid>*,.skills h3,.skills .row div,.step,.sec-h,.contact h2,.contact .lc,.contact a.l,.cards>div,.cta').forEach(el=>el.setAttribute('data-r',''));
+ new Set([...document.querySelectorAll('[data-r]')].map(e=>e.parentElement)).forEach(pr=>{[...pr.children].filter(c=>c.hasAttribute('data-r')).forEach((c,i)=>c.style.setProperty('--d',Math.min(i*.09,.5)+'s'))});
+ document.documentElement.classList.add('js');
+ if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});document.querySelectorAll('[data-r]').forEach(el=>io.observe(el))}
+ else document.querySelectorAll('[data-r]').forEach(el=>el.classList.add('in'));
+}
+if(!CSS.supports('height','1cap')){document.fonts.ready.then(()=>{const c=document.createElement('canvas').getContext('2d');c.font='100px Anton';const m=c.measureText('H').actualBoundingBoxAscent/100;if(m>.3)document.querySelector('.hero h1 .ibar').style.height=m+'em'})}
+let tk=false;
+function tick(){tk=false;const vh=innerHeight,y=scrollY;
+ bar.style.transform='scaleX('+Math.min(1,y/Math.max(1,document.documentElement.scrollHeight-vh))+')';
+ if(reduce)return;
+ if(y<vh*1.2){hp.forEach(el=>el.style.translate='0 '+(y*parseFloat(el.dataset.hp)).toFixed(1)+'px');if(frame)frame.style.opacity=Math.max(0,1-y/(vh*.85)).toFixed(2)}
+ par.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<-80||r.top>vh+80)return;
+  const c=r.top+r.height/2-vh/2,sc=parseFloat(getComputedStyle(el).scale)||1,lim=r.height*(sc-1)/2*.95;
+  el.style.translate='0 '+Math.max(-lim,Math.min(lim,-c*parseFloat(el.dataset.par))).toFixed(1)+'px'})}
+addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(tick)}},{passive:true});
+addEventListener('resize',tick);tick();
+</script>
+</body>
+</html>
